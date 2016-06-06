@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    tools:context="com.tsao.zhizhizhi.ui.fragment.ItemHeaderFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/iv_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_drawer_header_bg"/>
+
+    <TextView
+        android:id="@+id/tv_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:maxLines="2"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout>

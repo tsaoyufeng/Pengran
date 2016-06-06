@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@mipmap/ic_drawer_header_bg"
+    android:layout_width="match_parent"
+    android:gravity="bottom"
+    android:layout_height="160dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!--<com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/user_icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        fresco:placeholderImage="@mipmap/ic_launcher"
+        fresco:failureImage="@mipmap/ic_launcher"
+        fresco:roundAsCircle="true"/>-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:paddingTop="16dp"
+        android:src="@mipmap/ic_default_head" />
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:textSize="14sp"
+        android:text="登录/注册"/>
+    <TextView
+        android:id="@+id/user_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="st.yvancao@gmail.com"/>
+
+</LinearLayout>

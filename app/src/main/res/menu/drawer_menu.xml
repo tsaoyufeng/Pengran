@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_reading"
+            android:checked="true"
+            android:icon="@mipmap/ic_reading"
+            android:title="阅读"/>
+        <!--android:checked="true"此条目为选中状态，高亮显示-->
+        <item
+            android:id="@+id/nav_gallery"
+            android:checked="false"
+            android:icon="@mipmap/ic_picture"
+            android:title="美图"/>
+    </group>
+
+    <item android:title="Hi! @_@">
+
+        <menu>
+            <item
+                android:id="@+id/nav_theme"
+                android:icon="@mipmap/ic_theme"
+                android:title="主题"/>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@mipmap/ic_share"
+                android:title="分享"/>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@mipmap/ic_setting"
+                android:title="设置"/>
+
+        </menu>
+
+    </item>
+
+</menu>
