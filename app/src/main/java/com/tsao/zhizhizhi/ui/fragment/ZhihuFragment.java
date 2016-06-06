@@ -168,6 +168,7 @@ public class ZhihuFragment extends Fragment implements SwipeRefreshLayout.OnRefr
         this.date = date;
     }
 
+    //RecyclerView适配器
     class zhihuAdapter extends RecyclerView.Adapter{
 
         List<Story> storiesList = new ArrayList<Story>();
@@ -195,7 +196,7 @@ public class ZhihuFragment extends Fragment implements SwipeRefreshLayout.OnRefr
                 FragmentManager fragmentManager = getFragmentManager();
                 View itemHeaderView = layoutInflater.inflate(R.layout.zhihu_item_header, parent, false);
                 //创建ITEM_TYPE_HEADER类型的ViewHolder并将其返回
-                ItemHeaderViewHolder itemHeaderViewHolder = new ItemHeaderViewHolder(itemHeaderView/*,fragmentManager*/);
+                ItemHeaderViewHolder itemHeaderViewHolder = new ItemHeaderViewHolder(itemHeaderView);
                 return itemHeaderViewHolder;
 
 

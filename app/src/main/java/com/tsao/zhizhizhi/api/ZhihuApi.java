@@ -23,4 +23,5 @@ public interface ZhihuApi {
 
     @GET("api/4/news/before/{data}")
     Call<Zhihu> getZhuhuBeforeNews(@Path("data") String data);
+
 }
