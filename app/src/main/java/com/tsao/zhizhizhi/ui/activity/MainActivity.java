@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_gallery){
             FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.main_frame_layout,mPictureFragment);
+            fragmentTransaction.replace(R.id.main_frame_layout, mPictureFragment);
             fragmentTransaction.commit();
             System.out.println("id == R.id.nav_gallery");
 

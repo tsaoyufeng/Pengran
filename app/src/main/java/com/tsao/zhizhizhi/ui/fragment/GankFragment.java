@@ -2,6 +2,7 @@ package com.tsao.zhizhizhi.ui.fragment;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -17,6 +18,8 @@ import com.tsao.zhizhizhi.api.GankApi;
 import com.tsao.zhizhizhi.api.GankApiImpl;
 import com.tsao.zhizhizhi.model.Gank;
 import com.tsao.zhizhizhi.model.Result;
+import com.tsao.zhizhizhi.ui.activity.ImageDetailActivity;
+import com.tsao.zhizhizhi.util.Constant;
 import com.zhizhizhi.yvan.zhizhizhi.R;
 
 import java.util.ArrayList;
@@ -205,18 +208,34 @@ public class GankFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         }
     }
 
-    static class GankItemViewHolder extends RecyclerView.ViewHolder{
+    static class GankItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         ImageView itemImage;
         public GankItemViewHolder(View itemView) {
             super(itemView);
             itemImage = (ImageView)itemView.findViewById(R.id.iv_gank_item);
+            //设置点击事件
+            itemView.setOnClickListener(this);
         }
 
         void bindData(Result result){
+            itemView.setTag(result);//添加标签
             Picasso.with(itemImage.getContext())
                     .load(result.getUrl())
                     .into(itemImage);
+        }
+
+        @Override
+        public void onClick(View v) {
+            System.out.println("想看大图？？？不给看");
+            Result result = (Result)v.getTag();
+            String picUrl = result.getUrl();
+            String picId = result.getId();
+            Intent intent = new Intent(v.getContext(), ImageDetailActivity.class);
+            intent.putExtra(Constant.GANK_IMAGE_URL,picUrl);
+            intent.putExtra(Constant.GANK_IMAGE_ID,picId);
+            v.getContext().startActivity(intent);
+
         }
     }
 

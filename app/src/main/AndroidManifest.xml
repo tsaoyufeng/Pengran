@@ -3,6 +3,7 @@
     package="com.zhizhizhi.yvan.zhizhizhi">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -22,8 +23,9 @@
         <activity
             android:name="com.tsao.zhizhizhi.ui.activity.StoriesDetailActivity"
             android:parentActivityName="com.tsao.zhizhizhi.ui.activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="com.tsao.zhizhizhi.ui.activity.ImageDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
